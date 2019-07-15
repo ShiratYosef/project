@@ -1,0 +1,38 @@
+<!-- <p>
+  group-details works!
+</p> -->
+<div id="allPage">
+<div id="details">
+<mat-form-field dir="rtl">
+  <input matInput [(ngModel)]="group.code"  placeholder="קוד">
+</mat-form-field>
+<mat-form-field dir="rtl">
+  <input matInput [(ngModel)]="group.GroupName"  placeholder="שם">
+</mat-form-field>
+<mat-form-field dir="rtl">
+  <input matInput [(ngModel)]="group.grade1"  placeholder="החל מכיתה">
+</mat-form-field>
+<mat-form-field dir="rtl">
+  <input matInput [(ngModel)]="group.grade2"  placeholder="עד כיתה">
+</mat-form-field>
+<mat-form-field dir="rtl">
+  <input matInput [(ngModel)]="school.SchoolName"  placeholder="שם בית הספר">
+</mat-form-field>
+</div>
+<p>חפש ילד להוספה</p>
+<div id="warp">
+ <div id="childrenInGroup">
+<p>ילדים רשומים בקבוצה</p>
+<ul *ngIf="children!=null">
+  <li *ngFor="let item of children"><p>{{item.IdentityNum}}</p>
+    <p>{{item.FirstName}}</p></li>
+</ul>
+</div>
+<div id="selectChild">
+<p>בחר ילד להוספה</p>
+ </div>
+</div>
+
+<!-- <app-search-by-name-child [children]="children"></app-search-by-name-child> -->
+<button (click)="close()">close</button>
+</div>

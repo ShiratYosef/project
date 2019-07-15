@@ -1,0 +1,22 @@
+/* #childrenInGroup{
+position: absolute;
+ width:30%;
+height: 30%;
+
+}
+#selectChild{
+    position: absolute;
+    width:30%;
+    height: 30%;
+}
+#warp{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+
+}
+#allPage{
+    position: absolute;
+    widows: 100%;
+    height: 100%;
+} */

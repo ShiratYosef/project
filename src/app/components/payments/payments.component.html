@@ -1,0 +1,82 @@
+<p>
+  payments works!
+</p>
+<app-search-by-name-child [children]="children"></app-search-by-name-child>
+<form>
+  <!-- <mat-form-field dir="rtl">
+    <input matInput  placeholder="תאריך תשלום">
+  </mat-form-field> -->
+
+
+  <mat-form-field>
+      <mat-label>תאריך תשלום</mat-label>
+    <input matInput [matDatepicker]="picker" value="startDate">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+  </mat-form-field>
+<br>
+  <mat-form-field dir="rtl">
+    <input matInput  placeholder="הסכום לתשלום">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>אופן התשלום</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let type of types" [value]="type">
+        {{type}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+  <mat-form-field dir="rtl">
+    <input matInput  placeholder="לשנת הלימודים" value="תשעט">
+  </mat-form-field>
+  <br>
+  <mat-form-field dir="rtl">
+    <input matInput  placeholder="הסכום השנתי לתשלום">
+  </mat-form-field>
+  <br>
+  <mat-form-field dir="rtl">
+    <input matInput  placeholder="מספר השיעורים שרשום השנה">
+  </mat-form-field>
+  <br>
+  <mat-form-field dir="rtl">
+    <input matInput placeholder="מספר התשלומים ששולמו">
+  </mat-form-field>
+  <br>
+  <mat-form-field dir="rtl">
+    <input matInput placeholder="סך הכל שולם">
+  </mat-form-field>
+  <br>
+  <mat-form-field dir="rtl">
+    <input matInput placeholder="סך הכל נותר לתשלום">
+  </mat-form-field>
+  <br>
+  <mat-form-field dir="rtl">
+    <input matInput placeholder="חובות משנים קודמות">
+  </mat-form-field>
+  <br>
+  <mat-form-field dir="rtl">
+    <input matInput placeholder="קוד בנק">
+  </mat-form-field>
+  <br>
+  <mat-form-field dir="rtl">
+    <input matInput placeholder="סניף">
+  </mat-form-field>
+  <br>
+  <mat-form-field dir="rtl">
+    <input matInput placeholder="שם בעל חשבון">
+  </mat-form-field>
+  <br>
+  <mat-form-field dir="rtl">
+    <input matInput placeholder="מספר חשבון">
+  </mat-form-field>
+  <br>
+  <mat-form-field dir="rtl">
+    <input matInput placeholder="תאריך פדיון">
+  </mat-form-field>
+  <br>
+  <mat-form-field dir="rtl">
+    <input matInput placeholder="הערות">
+  </mat-form-field>
+</form>

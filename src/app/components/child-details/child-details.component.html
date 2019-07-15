@@ -1,0 +1,64 @@
+
+<!-- <div > -->
+  <!-- <p>
+    child-details works!
+  </p>
+  <input type="text" ([ngModel])="family.FamilyName"><label>מספר זהות</label>
+  <input type="text" ([ngModel])="family.FamilyName"><label>משפחה</label>
+  <input type="text" ([ngModel])="family.FamilyName"><label>שם פרטי</label>
+  <input type="text" ([ngModel])="family.FamilyName"><label>כתובת מגורים</label>
+  <input type="text" ([ngModel])="family.FamilyName"><label>עיר</label>
+  <input type="text" ([ngModel])="family.FamilyName"><label>טלפון בבית</label>
+  <input type="text" ([ngModel])="family.FamilyName"><label>שם האמא</label>
+  <input type="text" ([ngModel])="family.FamilyName"><label>נייד האמא</label>
+  <input type="text" ([ngModel])="family.FamilyName"><label>שם האבא</label>
+  <input type="text" ([ngModel])="family.FamilyName"><label>נייד אבא</label>
+  <input type="text" ([ngModel])="family.FamilyName"><label>תאריך לידה</label>
+  <input type="text" ([ngModel])="family.FamilyName"><label>תאריך רישום</label>
+  <input type="text" ([ngModel])="family.FamilyName"><label>גיל</label>
+  <input type="text" ([ngModel])="family.FamilyName"><label>בית ספר</label>
+  <input type="text" ([ngModel])="family.FamilyName"><label>כתה</label>
+  </div> -->
+  <p>{{family}}</p>
+ <button (click)="close()">סגור</button>
+ <!-- <p>{{ChildId}}</p>  -->
+ <div class="example-container">
+  <mat-form-field dir="rtl">
+    <input matInput [(ngModel)]="child.IdentityNum"  placeholder="מספר זהות">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="child.FirstName"  placeholder="שם פרטי">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="child.FamilyName"  placeholder="שם משפחה">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="child.Address"  placeholder="כתובת מגורים">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="family.FatherFirstName"  placeholder="כתובת מגורים">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="family.FatherFirstName"  placeholder="כתובת מגורים">
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <textarea matInput placeholder="הערות"></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Select">
+      <mat-option value="option">Option</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</div>
+<ul *ngIf="lessons!=null">
+  <li *ngFor="let item of lessons">{{item}}</li>
+</ul>

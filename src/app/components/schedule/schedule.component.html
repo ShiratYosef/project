@@ -1,0 +1,9 @@
+<p>
+  schedule works!
+</p>
+
+<label>מספר זהות</label>
+<button (click)="GetSchedule(326679016)">הצג מערכת לילד</button>
+<div *ngFor="let item of lessonsForDays">
+  {{item}}
+</div>

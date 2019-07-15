@@ -1,0 +1,93 @@
+
+<!-- <mat-form-field>
+  <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+</mat-form-field>
+
+<mat-autocomplete #auto="matAutocomplete">
+  <mat-option *ngFor="let child of children" [value]="child.IdentityNum">{{child.IdentityNum}}</mat-option>
+</mat-autocomplete> -->
+
+
+<!-- mmmmmmm -->
+<!-- <form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input  placeholder="search" aria-label="State" [matAutocomplete]="auto" [formControl]="stateCtrl">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let child of filteredStates | async" [value]="child.IdentityNum">
+        <span>{{child.IdentityNum}}</span>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>  -->
+
+<mat-form-field class="example-full-width">
+  <input matInput  placeholder="searchByIdentityNum" aria-label="State" [matAutocomplete]="auto" [formControl]="stateCtrl" (ngModelChange)="searchByIdentityNum($event)">
+</mat-form-field>
+<mat-autocomplete #auto="matAutocomplete">
+  <mat-option *ngFor="let item of newChildren" [value]="item.IdentityNum">
+    <div>{{item.IdentityNum}}</div>
+  </mat-option>
+</mat-autocomplete>
+
+<!-- <select>
+<option *ngFor="let item of newChildren">
+  {{item.IdentityNum}}
+</option>
+</select> -->
+<mat-form-field class="example-full-width">
+  <input matInput  placeholder="searchByName" aria-label="State" [matAutocomplete]="auto2" [formControl]="stateCtrl" (ngModelChange)="searchByName($event)">
+</mat-form-field>
+<mat-autocomplete #auto2="matAutocomplete">
+  <mat-option *ngFor="let item of newChildren" [value]="item.FirstName">
+    <div>{{item.FirstName}}</div>
+  </mat-option>
+</mat-autocomplete>
+<!-- <select>
+<option *ngFor="let item of newChildren">
+  {{item.FirstName}}
+</option>
+</select> -->
+
+
+<!-- <form class="example-form">
+  <mat-form-field>
+    <input matInput placeholder="Choose option" [formControl]="stateCtrl" [matAutocomplete]="auto" />
+  </mat-form-field>
+
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let item of filteredStates | async" [value]="item">
+      <div>{{item.IdentityNum}}</div>
+    </mat-option>
+  </mat-autocomplete>
+</form> -->
+<!-- 
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input #stateInput (keyup)="0" matInput placeholder="State" aria-label="State" [matAutocomplete]="auto" [formControl]="stateCtrl">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option (onSelectionChange)="stateInput.value !=undefined && onEnter($event)" *ngFor="let state of filteredStates | async" [value]="state.FirstName">
+        <img style="vertical-align:middle;" aria-hidden src="{{state.flag}}" height="25" />
+        <span>{{ state.FirstName}}</span> |
+        <small>Population: {{state.FirstName}}</small>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>  -->
+
+
+
+<!-- <form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="State" aria-label="State" [matAutocomplete]="auto" [formControl]="stateCtrl">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+        <img class="example-option-img" aria-hidden [src]="state.flag" height="25">
+        <span>{{state.name}}</span> |
+        <small>Population: {{state.population}}</small>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field> -->
+
+
+
+  
